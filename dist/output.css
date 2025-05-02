@@ -407,6 +407,9 @@
   .w-28 {
     width: calc(var(--spacing) * 28);
   }
+  .w-30 {
+    width: calc(var(--spacing) * 30);
+  }
   .w-35 {
     width: calc(var(--spacing) * 35);
   }
@@ -574,9 +577,6 @@
   }
   .bg-\[\#FFF1EB\] {
     background-color: #FFF1EB;
-  }
-  .bg-\[\#FF\] {
-    background-color: #FF;
   }
   .bg-\[\#f4f4f4\] {
     background-color: #f4f4f4;
@@ -890,6 +890,11 @@
       width: calc(var(--spacing) * 11);
     }
   }
+  .md\:w-50 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 50);
+    }
+  }
   .md\:w-65 {
     @media (width >= 48rem) {
       width: calc(var(--spacing) * 65);
@@ -918,6 +923,11 @@
   .md\:gap-5 {
     @media (width >= 48rem) {
       gap: calc(var(--spacing) * 5);
+    }
+  }
+  .md\:gap-6 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 6);
     }
   }
   .md\:gap-10 {
