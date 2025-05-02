@@ -268,6 +268,9 @@
   .mt-8 {
     margin-top: calc(var(--spacing) * 8);
   }
+  .mt-10 {
+    margin-top: calc(var(--spacing) * 10);
+  }
   .mt-14 {
     margin-top: calc(var(--spacing) * 14);
   }
@@ -353,6 +356,9 @@
   .h-82 {
     height: calc(var(--spacing) * 82);
   }
+  .h-fit {
+    height: fit-content;
+  }
   .h-full {
     height: 100%;
   }
@@ -415,6 +421,9 @@
   }
   .w-full {
     width: 100%;
+  }
+  .min-w-25 {
+    min-width: calc(var(--spacing) * 25);
   }
   .min-w-50 {
     min-width: calc(var(--spacing) * 50);
@@ -557,11 +566,17 @@
   .bg-\[\#FBFBFB\] {
     background-color: #FBFBFB;
   }
+  .bg-\[\#FF510C0D\] {
+    background-color: #FF510C0D;
+  }
   .bg-\[\#FFDA79\] {
     background-color: #FFDA79;
   }
   .bg-\[\#FFF1EB\] {
     background-color: #FFF1EB;
+  }
+  .bg-\[\#FF\] {
+    background-color: #FF;
   }
   .bg-\[\#f4f4f4\] {
     background-color: #f4f4f4;
@@ -627,6 +642,9 @@
   .py-6 {
     padding-block: calc(var(--spacing) * 6);
   }
+  .py-16 {
+    padding-block: calc(var(--spacing) * 16);
+  }
   .pr-6 {
     padding-right: calc(var(--spacing) * 6);
   }
@@ -691,9 +709,6 @@
   }
   .text-\[\#00000045\] {
     color: #00000045;
-  }
-  .text-\[\#51\] {
-    color: #51;
   }
   .text-\[\#115BCA\] {
     color: #115BCA;
@@ -883,6 +898,11 @@
   .md\:w-fit {
     @media (width >= 48rem) {
       width: fit-content;
+    }
+  }
+  .md\:min-w-72 {
+    @media (width >= 48rem) {
+      min-width: calc(var(--spacing) * 72);
     }
   }
   .md\:min-w-80 {
@@ -1183,11 +1203,6 @@
       width: calc(var(--spacing) * 107);
     }
   }
-  .lg\:flex-col {
-    @media (width >= 64rem) {
-      flex-direction: column;
-    }
-  }
   .lg\:flex-col-reverse {
     @media (width >= 64rem) {
       flex-direction: column-reverse;
@@ -1309,11 +1324,6 @@
     @media (width >= 64rem) {
       --tw-leading: calc(var(--spacing) * 16);
       line-height: calc(var(--spacing) * 16);
-    }
-  }
-  .lg\:text-\[28\] {
-    @media (width >= 64rem) {
-      color: 28;
     }
   }
   .lg\:shadow-\[0_0_15px_3px_\#ff510b66\] {
