@@ -5,7 +5,6 @@
     --font-sans: "Yekan", sans-serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-amber-50: oklch(0.987 0.022 95.277);
     --color-white: #fff;
     --spacing: 0.25rem;
     --text-xs: 0.75rem;
@@ -289,6 +288,9 @@
   .mt-20 {
     margin-top: calc(var(--spacing) * 20);
   }
+  .mb-5 {
+    margin-bottom: calc(var(--spacing) * 5);
+  }
   .mb-6 {
     margin-bottom: calc(var(--spacing) * 6);
   }
@@ -540,14 +542,6 @@
   .gap-y-5 {
     row-gap: calc(var(--spacing) * 5);
   }
-  .divide-x-2 {
-    :where(& > :not(:last-child)) {
-      --tw-divide-x-reverse: 0;
-      border-inline-style: var(--tw-border-style);
-      border-inline-start-width: calc(2px * var(--tw-divide-x-reverse));
-      border-inline-end-width: calc(2px * calc(1 - var(--tw-divide-x-reverse)));
-    }
-  }
   .divide-y {
     :where(& > :not(:last-child)) {
       --tw-divide-y-reverse: 0;
@@ -565,11 +559,6 @@
   .divide-\[\#EBEBEB\] {
     :where(& > :not(:last-child)) {
       border-color: #EBEBEB;
-    }
-  }
-  .divide-\[\#\] {
-    :where(& > :not(:last-child)) {
-      border-color: #;
     }
   }
   .overflow-hidden {
@@ -840,11 +829,6 @@
   .max-lg\:rounded-\[18px\] {
     @media (width < 64rem) {
       border-radius: 18px;
-    }
-  }
-  .max-lg\:rounded-lg {
-    @media (width < 64rem) {
-      border-radius: var(--radius-lg);
     }
   }
   .max-lg\:shadow-\[0_0_20px_-5px_\#0000001A\] {
@@ -1395,16 +1379,6 @@
       gap: calc(var(--spacing) * 8);
     }
   }
-  .lg\:divide-x {
-    @media (width >= 64rem) {
-      :where(& > :not(:last-child)) {
-        --tw-divide-x-reverse: 0;
-        border-inline-style: var(--tw-border-style);
-        border-inline-start-width: calc(1px * var(--tw-divide-x-reverse));
-        border-inline-end-width: calc(1px * calc(1 - var(--tw-divide-x-reverse)));
-      }
-    }
-  }
   .lg\:divide-x-2 {
     @media (width >= 64rem) {
       :where(& > :not(:last-child)) {
@@ -1412,13 +1386,6 @@
         border-inline-style: var(--tw-border-style);
         border-inline-start-width: calc(2px * var(--tw-divide-x-reverse));
         border-inline-end-width: calc(2px * calc(1 - var(--tw-divide-x-reverse)));
-      }
-    }
-  }
-  .lg\:divide-amber-50 {
-    @media (width >= 64rem) {
-      :where(& > :not(:last-child)) {
-        border-color: var(--color-amber-50);
       }
     }
   }
@@ -1431,6 +1398,11 @@
     @media (width >= 64rem) {
       border-bottom-style: var(--tw-border-style);
       border-bottom-width: 1px;
+    }
+  }
+  .lg\:bg-lightGray {
+    @media (width >= 64rem) {
+      background-color: var(--color-lightGray);
     }
   }
   .lg\:px-12 {
@@ -1448,9 +1420,9 @@
       padding-inline: calc(var(--spacing) * 36);
     }
   }
-  .lg\:py-2 {
+  .lg\:py-5 {
     @media (width >= 64rem) {
-      padding-block: calc(var(--spacing) * 2);
+      padding-block: calc(var(--spacing) * 5);
     }
   }
   .lg\:py-8 {
@@ -1590,7 +1562,7 @@
   inherits: false;
   initial-value: skewY(0);
 }
-@property --tw-divide-x-reverse {
+@property --tw-divide-y-reverse {
   syntax: "*";
   inherits: false;
   initial-value: 0;
@@ -1599,11 +1571,6 @@
   syntax: "*";
   inherits: false;
   initial-value: solid;
-}
-@property --tw-divide-y-reverse {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
 }
 @property --tw-gradient-position {
   syntax: "*";
@@ -1714,4 +1681,9 @@
   syntax: "*";
   inherits: false;
   initial-value: solid;
+}
+@property --tw-divide-x-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
 }
